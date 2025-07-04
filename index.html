@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Festa Julina - 19 de Julho</title>
+ 
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="tema-claro">
+
+  <!-- Bandeirinhas -->
+  <div class="bandeirinhas">
+    <div class="linha-bandeiras">
+      <span class="bandeira"></span><span class="bandeira"></span><span class="bandeira"></span><span class="bandeira"></span>
+      <span class="bandeira"></span><span class="bandeira"></span><span class="bandeira"></span><span class="bandeira"></span>
+      <span class="bandeira"></span><span class="bandeira"></span>
+    </div>
+  </div>
+
+  <!-- Canvas de balões e fogueira -->
+  <canvas id="baloesCanvas"></canvas>
+  <canvas id="fogueiraCanvas"></canvas>
+
+  <!-- Botões -->
+  <button id="botao-tema">🌙 Tema Escuro</button>
+  <button id="controleAudio">🔊 Música: Pausar</button>
+
+  <!-- Conteúdo -->
+  <header>
+    <h1>🎉 Arraiá do SESC - 19 de Julho 🎉</h1>
+     <h1>🎉 SESC - Campo Mourão 🎉</h1>
+      <h1>🎉 A partir das 15hs - Até às 21hrs 🎉</h1>
+       <footer>
+    <p>&copy; 2025 - Festa Julina | Comidas típicas, quadrilha e muita alegria!</p>
+  </footer>
+    <p id="mensagem" class="typing"></p>
+  </header>
+<main>
+    <section class="video">
+      <video controls autoplay muted loop>
+        <source src="video1.mp4" type="video/mp4"/>
+        Seu navegador não suporta vídeo.
+      </video>
+    </section>
+
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Festa Julina | Comidas típicas, quadrilha e muita alegria!</p>
+  </footer>
+
+  <!-- Música -->
+  <audio id="audioFundo" autoplay loop>
+    <source src="forro.mp3.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

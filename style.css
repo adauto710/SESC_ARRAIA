@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Tema claro e escuro */
+.tema-claro { background: #fff9e6; color: #333; }
+.tema-escuro { background: #2e1f47; color: #f7e8b5; }
+
+.tema-claro header { background-color: #ffcc70; }
+.tema-escuro header { background-color: #6b4080; }
+
+.tema-claro footer { background: #ffc107; }
+.tema-escuro footer { background: #9b59b6; }
+
+header { padding: 20px; box-shadow: 0 2px 5px #0003; position: relative; z-index: 2; }
+.video { margin: 20px auto; max-width: 800px; z-index: 1; position: relative; }
+video { width: 100%; border-radius: 10px; box-shadow: 0 4px 8px #0002; }
+
+footer { padding: 15px; color: #fff; font-weight: bold; }
+
+#mensagem.typing::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Galeria */
+.galeria { background: #fff4d1; padding: 30px 10px; }
+.fotos { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+.fotos img { width: 200px; opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
+.fotos img.aparecer { opacity: 1; transform: translateY(0); }
+
+/* Botões */
+#botao-tema, #controleAudio {
+  position: fixed;
+  top: 20px;
+  padding: 10px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 10;
+  border: none;
+  font-weight: bold;
+}
+#botao-tema { right: 150px; background: #333; color: #fff; }
+#controleAudio { right: 20px; background: #ff9800; color: #fff; }
+
+#botao-tema:hover { background: #555; }
+#controleAudio:hover { background: #e65100; }
+
+/* Bandeirinhas */
+.bandeirinhas {
+  position: fixed; top: 0; left: 0; width: 100%; height: 60px;
+  z-index: 5; pointer-events: none;
+}
+.linha-bandeiras {
+  display: flex; justify-content: center; gap: 8px;
+  position: relative; top: 10px;
+  animation: balancar 2s ease-in-out infinite alternate;
+}
+.bandeira {
+  width: 20px; height: 30px; background: red;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  animation: mudarCor 3s infinite;
+}
+@keyframes balancar {
+  0% { transform: rotateZ(-2deg); }
+  100% { transform: rotateZ(2deg); }
+}
+@keyframes mudarCor {
+  0% { background-color: red; }
+  25% { background-color: yellow; }
+  50% { background-color: green; }
+  75% { background-color: blue; }
+  100% { background-color: red; }
+}
+
+/* Balões e fogueira */
+#baloesCanvas, #fogueiraCanvas {
+  position: fixed;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+#baloesCanvas {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#fogueiraCanvas {
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+}
